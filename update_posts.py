@@ -19,9 +19,9 @@ MONTHS = {
 }
 TEXT = {
     "es": {"h2": "Publicaciones.", "sub": "Lo último que he compartido en LinkedIn.",
-           "read": "Leer en LinkedIn", "all": "Todas en LinkedIn", "lang_note": ""},
+           "read": "Leer en LinkedIn", "read_article": "Leer artículo", "all": "Todas en LinkedIn", "lang_note": ""},
     "en": {"h2": "Writing.", "sub": "The latest things I've shared on LinkedIn.",
-           "read": "Read on LinkedIn", "all": "All on LinkedIn", "lang_note": " (in Spanish)"},
+           "read": "Read on LinkedIn", "read_article": "Read article", "all": "All on LinkedIn", "lang_note": " (in Spanish)"},
 }
 PROFILE = "https://www.linkedin.com/in/manuel-f-409496b/recent-activity/all/"
 
@@ -37,12 +37,17 @@ def render(posts: list, lang: str) -> str:
     items = []
     for p in posts:
         note = t["lang_note"] if p.get("lang", "es") != lang else ""
+        is_article = p.get("kind") == "article"
+        read = t["read_article"] if is_article else t["read"]
+        url = p["url"]
+        if is_article and lang == "en" and not url.startswith("http"):
+            url = "../" + url
         items.append(
             f'        <li>\n'
             f'          <time datetime="{p["date"]}">{fmt_date(p["date"], lang)}</time>\n'
             f'          <h3>{html.escape(p["title"][lang])}</h3>\n'
             f'          <p>{html.escape(p["summary"][lang])}</p>\n'
-            f'          <a class="more" href="{html.escape(p["url"])}">{t["read"]}{note}</a>\n'
+            f'          <a class="more" href="{html.escape(url)}">{read}{note}</a>\n'
             f'        </li>'
         )
     return (
