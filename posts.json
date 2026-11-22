@@ -1,0 +1,28 @@
+[
+  {
+    "date": "2026-11-22",
+    "url": "https://www.linkedin.com/feed/update/urn:li:share:7530344340494254080/",
+    "lang": "es",
+    "title": {
+      "es": "Un bucle de caos hecho con agentes de IA",
+      "en": "A chaos loop run by AI agents"
+    },
+    "summary": {
+      "es": "Cómo Anthropic usó agentes para intentar tumbar Claude Docs antes de lanzarlo, y por qué empezamos a diseñar sistemas que puedan operar los agentes.",
+      "en": "How Anthropic used agents to try to break Claude Docs before launch, and why we're starting to design systems that agents can operate."
+    }
+  },
+  {
+    "date": "2026-11-22",
+    "url": "https://www.linkedin.com/feed/update/urn:li:share:7530343320099684353/",
+    "lang": "es",
+    "title": {
+      "es": "La frontera dentada: dónde la IA te ayuda y dónde te hace fallar",
+      "en": "The jagged frontier: where AI helps you and where it makes you fail"
+    },
+    "summary": {
+      "es": "Lo que encontraron Harvard, Wharton, MIT y BCG con 758 consultores, y por qué el criterio importa más que los prompts.",
+      "en": "What Harvard, Wharton, MIT and BCG found with 758 consultants, and why judgment matters more than prompts."
+    }
+  }
+]

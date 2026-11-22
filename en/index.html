@@ -95,6 +95,14 @@ section.alt{background:var(--bg-alt)}
 .stat b{display:block;font:700 clamp(2.4rem,1.8rem + 2vw,3.4rem)/1 var(--display);letter-spacing:-.02em;background:linear-gradient(90deg,#0071e3,#a259ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .stat span{display:block;margin-top:.4rem;color:var(--soft)}
 
+/* posts */
+.posts{list-style:none;margin:0 auto;padding:0;max-width:760px}
+.posts li{padding:26px 0;border-top:1px solid var(--line)}
+.posts li:last-child{border-bottom:1px solid var(--line)}
+.posts time{font-size:14px;font-weight:600;color:var(--soft)}
+.posts h3{font-size:clamp(1.3rem,1.1rem + .6vw,1.6rem);line-height:1.2;margin:.3rem 0 .4rem;font-weight:700}
+.posts p{color:var(--soft);margin-bottom:.5rem}
+.all{text-align:center;margin-top:28px}
 footer{background:var(--bg-alt);color:var(--soft);font-size:12px;padding:22px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:16px}
 
@@ -127,6 +135,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;b
     <a class="brand" href="./">Manuel Fernández</a>
     <ul>
       <li><a href="#proyectos">Projects</a></li>
+      <li><a href="#publicaciones">Writing</a></li>
       <li><a href="#sobre-mi">About</a></li>
       <li><a href="https://www.linkedin.com/in/manuel-f-409496b/">LinkedIn</a></li>
       <li><a href="../" hreflang="es" lang="es">Español</a></li>
@@ -217,7 +226,33 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;b
     </div>
   </section>
 
-  <section id="sobre-mi" aria-labelledby="sobre-t">
+<!-- POSTS:START -->
+  <section id="publicaciones" aria-labelledby="posts-t">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="posts-t">Writing.</h2>
+        <p>The latest things I've shared on LinkedIn.</p>
+      </div>
+      <ol class="posts">
+        <li>
+          <time datetime="2026-11-22">Nov 22, 2026</time>
+          <h3>A chaos loop run by AI agents</h3>
+          <p>How Anthropic used agents to try to break Claude Docs before launch, and why we&#x27;re starting to design systems that agents can operate.</p>
+          <a class="more" href="https://www.linkedin.com/feed/update/urn:li:share:7530344340494254080/">Read on LinkedIn (in Spanish)</a>
+        </li>
+        <li>
+          <time datetime="2026-11-22">Nov 22, 2026</time>
+          <h3>The jagged frontier: where AI helps you and where it makes you fail</h3>
+          <p>What Harvard, Wharton, MIT and BCG found with 758 consultants, and why judgment matters more than prompts.</p>
+          <a class="more" href="https://www.linkedin.com/feed/update/urn:li:share:7530343320099684353/">Read on LinkedIn (in Spanish)</a>
+        </li>
+      </ol>
+      <p class="all"><a class="more" href="https://www.linkedin.com/in/manuel-f-409496b/recent-activity/all/">All on LinkedIn</a></p>
+    </div>
+  </section>
+  <!-- POSTS:END -->
+
+  <section class="alt" id="sobre-mi" aria-labelledby="sobre-t">
     <div class="wrap">
       <div class="head">
         <h2 id="sobre-t">About me.</h2>
