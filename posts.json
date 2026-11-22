@@ -24,5 +24,19 @@
       "es": "Lo que encontraron Harvard, Wharton, MIT y BCG con 758 consultores, y por qué el criterio importa más que los prompts.",
       "en": "What Harvard, Wharton, MIT and BCG found with 758 consultants, and why judgment matters more than prompts."
     }
+  },
+  {
+    "date": "2026-11-22",
+    "url": "articulos/2026-11-22-de-picar-codigo-a-jefe-de-cocina-como-escalar-a-decenas-de-a/",
+    "kind": "article",
+    "lang": "es",
+    "title": {
+      "es": "De picar código a jefe de cocina: cómo escalar a decenas de agentes de IA sin perder el control",
+      "en": "\"From writing code to running the kitchen: scaling to dozens of AI agents without losing control\""
+    },
+    "summary": {
+      "es": "A partir de tres o cuatro agentes en paralelo, el cuello de botella eres tú. Los cuatro pilares con los que Lauren Tan rompió ese techo no van de mejores prompts, sino de ingeniería de entornos.",
+      "en": "Past three or four parallel agents, you become the bottleneck. The four pillars Lauren Tan used to break through that ceiling are not about better prompts, but about environment engineering."
+    }
   }
 ]
