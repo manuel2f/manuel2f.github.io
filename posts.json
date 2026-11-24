@@ -39,5 +39,19 @@
       "en": "Past three or four parallel agents, you become the bottleneck. The four pillars Lauren Tan used to break through that ceiling are not about better prompts, but about environment engineering."
     },
     "linkedin": "https://www.linkedin.com/feed/update/urn:li:share:7530380806960160768/"
+  },
+  {
+    "date": "2026-11-24",
+    "url": "articulos/2026-11-24-skills-over-mcp-tasks-y-elicitation-lo-que-cambia-si-mantien/",
+    "kind": "article",
+    "lang": "es",
+    "title": {
+      "es": "Skills over MCP, Tasks y Elicitation - lo que cambia si mantienes un servidor MCP",
+      "en": "Skills over MCP, Tasks and Elicitation - what changes if you maintain an MCP server"
+    },
+    "summary": {
+      "es": "Anthropic ha anunciado Skills over MCP, Tasks, Elicitation y File Uploads. Repaso qué es nuevo de verdad, qué estado tiene cada pieza en la especificación y qué tocaría en un servidor propio.",
+      "en": "Anthropic just shipped Skills over MCP, Tasks, Elicitation and File Uploads. A practical look at what is actually new, the real maturity of each piece, and what I would change in my own server."
+    }
   }
 ]
