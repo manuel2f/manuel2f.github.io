@@ -52,6 +52,7 @@
     "summary": {
       "es": "Anthropic ha anunciado Skills over MCP, Tasks, Elicitation y File Uploads. Repaso qué es nuevo de verdad, qué estado tiene cada pieza en la especificación y qué tocaría en un servidor propio.",
       "en": "Anthropic just shipped Skills over MCP, Tasks, Elicitation and File Uploads. A practical look at what is actually new, the real maturity of each piece, and what I would change in my own server."
-    }
+    },
+    "linkedin": "https://www.linkedin.com/feed/update/urn:li:share:7531106202148343810/"
   }
 ]
