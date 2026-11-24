@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>De conectores pasivos a agentes colaborativos - Skills over MCP, Tasks y Elicitation · Manuel Fernández</title>
+<meta name="description" content="MCP cumple dos años con el mayor paquete de novedades desde su lanzamiento. Qué hace cada una, con ejemplos reales, y qué tocaría primero en un servidor propio.">
+<link rel="canonical" href="https://manuel2f.github.io/articulos/2026-11-24-de-conectores-pasivos-a-agentes-colaborativos-skills-over-mc/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="De conectores pasivos a agentes colaborativos - Skills over MCP, Tasks y Elicitation">
+<meta property="og:description" content="MCP cumple dos años con el mayor paquete de novedades desde su lanzamiento. Qué hace cada una, con ejemplos reales, y qué tocaría primero en un servidor propio.">
+<meta property="og:url" content="https://manuel2f.github.io/articulos/2026-11-24-de-conectores-pasivos-a-agentes-colaborativos-skills-over-mc/">
+<meta property="article:published_time" content="2026-11-24">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='42' font-family='-apple-system,Helvetica,Arial' font-size='28' font-weight='600' text-anchor='middle' fill='%23f5f5f7'%3EMF%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  color-scheme: light dark;
+  --bg:     light-dark(#ffffff, #000000);
+  --bg-alt: light-dark(#f5f5f7, #101012);
+  --ink:    light-dark(#1d1d1f, #f5f5f7);
+  --soft:   light-dark(#6e6e73, #a1a1a6);
+  --line:   light-dark(#d2d2d7, #38383a);
+  --blue:   light-dark(#0066cc, #2997ff);
+  --code:   light-dark(#f5f5f7, #1c1c1e);
+  --nav:    light-dark(rgb(255 255 255 / .72), rgb(22 22 23 / .72));
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:19px/1.6 var(--font);letter-spacing:-.012em;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.nav{position:sticky;top:0;z-index:10;background:var(--nav);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
+.nav .in{max-width:980px;margin:0 auto;padding:0 22px;height:48px;display:flex;align-items:center;justify-content:space-between;font-size:12px}
+.nav .brand{font-weight:600;font-size:15px;color:var(--ink)}
+.nav a.back{color:var(--ink);opacity:.85}
+article{max-width:692px;margin:0 auto;padding:clamp(48px,4rem + 2vw,96px) 22px 40px}
+.meta{font-size:15px;font-weight:600;color:var(--soft)}
+h1{font-family:var(--display);font-size:clamp(2.2rem,1.5rem + 3vw,3.6rem);line-height:1.07;letter-spacing:-.015em;font-weight:700;margin:.35rem 0 .9rem;text-wrap:balance}
+.lede{font-size:clamp(1.2rem,1.05rem + .5vw,1.45rem);line-height:1.4;color:var(--soft);font-weight:500;margin:0 0 2.4rem;text-wrap:pretty}
+.body h2{font-family:var(--display);font-size:1.6rem;line-height:1.2;margin:2.4rem 0 .8rem;text-wrap:balance}
+.body h3{font-family:var(--display);font-size:1.25rem;margin:2rem 0 .6rem}
+.body p,.body ul,.body ol,.body blockquote{margin:0 0 1.2rem;text-wrap:pretty}
+.body li{margin-bottom:.4rem}
+.body blockquote{border-left:3px solid var(--line);padding-left:1rem;color:var(--soft)}
+.body code{font:.85em ui-monospace,"SF Mono",Menlo,monospace;background:var(--code);padding:.1em .35em;border-radius:6px}
+.body pre{background:var(--code);padding:1rem;border-radius:12px;overflow-x:auto;font-size:15px;line-height:1.5}
+.body pre code{background:none;padding:0}
+.body img{max-width:100%;height:auto;border-radius:12px}
+.sources{margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--line);font-size:15px;color:var(--soft)}
+.sources h2{font-size:15px;font-weight:600;margin:0 0 .5rem;font-family:var(--font);color:var(--ink)}
+.sources ul{margin:0;padding-left:1.1rem}
+.sources li{overflow-wrap:anywhere}
+.discuss{margin-top:2rem;font-size:17px}
+.more::after{content:" ›"}
+footer{background:var(--bg-alt);color:var(--soft);font-size:12px;padding:22px;margin-top:40px}
+footer .in{max-width:980px;margin:0 auto}
+</style>
+</head>
+<body>
+<header class="nav">
+  <nav class="in" aria-label="Principal">
+    <a class="brand" href="../../">Manuel Fernández</a>
+    <a class="back" href="../../#publicaciones">Publicaciones</a>
+  </nav>
+</header>
+<main>
+  <article>
+    <p class="meta"><time datetime="2026-11-24">24 nov 2026</time> · 6 min de lectura</p>
+    <h1>De conectores pasivos a agentes colaborativos - Skills over MCP, Tasks y Elicitation</h1>
+    <p class="lede">MCP cumple dos años con el mayor paquete de novedades desde su lanzamiento. Qué hace cada una, con ejemplos reales, y qué tocaría primero en un servidor propio.</p>
+    <div class="body">
+<p>MCP cumple dos años esta semana. Anthropic lo liberó el 25 de noviembre de 2024 y hoy lo aloja la Agentic AI Foundation, con más de 700 millones de descargas mensuales de sus SDK y más de 10.000 conectores disponibles en Claude.</p>
+<p>Y llega el cumpleaños con el mayor paquete de novedades desde el lanzamiento: <strong>Skills over MCP, Tasks, Elicitation y File Uploads</strong>. Cuatro piezas que cambian la forma de un servidor MCP: deja de ser un catálogo de funciones que esperan a ser llamadas y pasa a ser algo más parecido a otro agente, que enseña lo que sabe, acepta encargos largos y te pregunta antes de hacer algo gordo.</p>
+<p>Esto es lo que hace cada una y por dónde empezaría yo.</p>
+<h2>Skills over MCP: deja de pelear con las descripciones</h2>
+<p>El problema es viejo. Tu servidor expone herramientas y lo único que el modelo sabe de ellas son sus nombres, sus <code>inputSchema</code> y sus descripciones. Cuando el "cómo se usa esto" no cabe ahí, acabas metiendo párrafos de instrucciones en la descripción de cada herramienta, y eso se paga en tokens desde el primer mensaje de la sesión.</p>
+<p>Lo vi con toda claridad hace unos días montando un servidor MCP de búsqueda de vuelos y hoteles en mi propio VPS. Son 22 herramientas en un solo servidor, y su autor se encontró exactamente con este muro: las reglas de uso no caben en las descripciones. ¿Su solución? Publicar una herramienta llamada <code>get_guide</code> que no busca nada — solo devuelve un manual largo en Markdown con las normas de la casa: cómo leer el sobre de cada respuesta, por qué un resultado vacío no significa que no haya vuelos, cuándo no reintentar tras un bloqueo. Y, por si el cliente no lee recursos, la misma guía duplicada como recurso MCP.</p>
+<p>Funciona, pero es una prótesis. <strong>Eso es precisamente lo que Skills over MCP viene a estandarizar</strong>: publicar esas instrucciones como habilidades versionadas que el cliente <strong>carga solo cuando la tarea las pide</strong>, en vez de una herramienta falsa que hay que acordarse de llamar. Se actualizan con el servidor y no hay nada que instalar aparte.</p>
+<p>Ejemplos reales, por si quieres ver el patrón antes de copiarlo: <strong>Shopify</strong> guía a Claude para diseñar y actualizar la tienda de un comerciante de principio a fin, <strong>HubSpot</strong> lo usa para el alta de clientes, <strong>Atlassian</strong> para dar contexto organizativo, y <strong>Carta</strong> para emitir participaciones a partir de un documento subido.</p>
+<p>El patrón que yo leo aquí: la habilidad es el sitio donde van las <em>reglas de tu negocio</em> y las convenciones de tu cliente concreto, no la documentación de tu API.</p>
+<p>Combínalo con la búsqueda de herramientas —que según Anthropic recorta más de un 85 % del contexto que consumen las definiciones en montajes con varios servidores— y por fin puedes tener un catálogo grande sin pagarlo en cada turno.</p>
+<h2>Tasks: tu herramienta ya no bloquea al agente</h2>
+<p>Hasta ahora una llamada tenía que terminar antes de que el modelo siguiera razonando. Cualquier cosa pesada —un informe, un bucle de subagentes— era candidata al timeout.</p>
+<p>Con Tasks el servidor acepta la llamada, la ejecuta en segundo plano y devuelve un identificador; el cliente sigue a lo suyo y recoge el resultado cuando está. <strong>ZoomInfo</strong> lo usa para investigaciones de cuentas y contactos que antes requerían varias peticiones encadenadas.</p>
+<p>Si mantienes un servidor, mira primero las herramientas que ya te dan miedo por lentas. Esas son las que toca migrar.</p>
+<h2>Elicitation: el "¿seguro?" que no depende del modelo</h2>
+<p>Borrar datos o gastar dinero no se decide dentro de un razonamiento probabilístico. Con Elicitation el servidor <strong>pausa a mitad de llamada</strong>, pide confirmación o datos estructurados con un formulario o un enlace, y continúa justo donde lo dejó.</p>
+<p>Los tres ejemplos del anuncio valen como plantilla de diseño:</p>
+<ul>
+<li><strong>Supabase</strong> confirma el coste antes de crear un proyecto de pago y antes de ejecutar SQL destructivo.</li>
+<li><strong>Railway</strong> pregunta antes de eliminar un servicio.</li>
+<li><strong>GitHub</strong> te hace teclear el nombre del repositorio antes de que un agente lo borre.</li>
+</ul>
+<p>Fíjate en el tercero: no es un "¿estás seguro?", es una confirmación que <strong>obliga a escribir algo que el modelo no puede rellenar por ti</strong>. Esa es la diferencia entre un control real y un adorno.</p>
+<h2>File Uploads: el canal que faltaba para los binarios</h2>
+<p>Pasar un PDF o una hoja de cálculo por la ventana de contexto es caro y absurdo cuando el servidor tiene sus propios parsers. File Uploads abre ese canal directo: el cliente le pasa el fichero al servidor sin serializarlo en el historial de la conversación.</p>
+<p>Es la pieza más verde de las cuatro —sigue como extensión experimental y el propio equipo pide que la probemos—, así que pruébala, pero no la pongas todavía en la ruta crítica de nada que esté en producción.</p>
+<h2>Los cimientos que nadie menciona</h2>
+<p>Las cuatro novedades se llevan los titulares, pero lo que de verdad permite llevar un servidor MCP a producción llegó antes y casi sin ruido:</p>
+<ul>
+<li><strong>La especificación 2026-07-28 es stateless.</strong> Sin afinidad de sesión en memoria puedes escalar en horizontal, poner el servidor detrás de un API Gateway y perder una instancia sin perder la conversación.</li>
+<li><strong>Enterprise-Managed Authorization</strong>: el administrador de la organización autoriza el servidor una vez y los usuarios se conectan automáticamente, en lugar de pasar cada uno por su propio flujo de OAuth.</li>
+<li><strong>MCP Apps</strong>: el servidor puede renderizar una interfaz completa junto a la conversación o a pantalla completa, para cuando una tabla o un formulario dicen más que un párrafo de Markdown.</li>
+</ul>
+<p>Si tu servidor va a tener usuarios de verdad, estas tres importan más que cualquiera de las novedades de esta semana. Y a diferencia de las otras, ya están estabilizadas.</p>
+<h2>Lo que no sale en el anuncio y a mí me parece más interesante</h2>
+<p>Si lo que te atrae es que el agente y el servidor colaboren de verdad, hay una extensión que no aparece en el anuncio y va más lejos que File Uploads: <strong>Events</strong>. Permite suscribirse a eventos de sistemas externos y reaccionar cuando ocurren, por sondeo, push o webhook. Ahí sí cambia la topología: el servidor deja de esperar a que le pregunten. Y en la misma lista está <strong>Server Cards</strong>, para que un cliente conozca los metadatos de un servidor antes de conectarse.</p>
+<h2>Lo que yo haría esta semana</h2>
+<p>Nada de reescribir el servidor entero. Tres pasos, por orden de retorno:</p>
+<ol>
+<li>Saca de las descripciones de tus herramientas todo lo que sea procedimiento y conviértelo en una habilidad. Si ya tienes tu propia versión artesanal —un <code>get_guide</code>, un README que pides al agente que lea—, ya has hecho el análisis: solo te falta publicarlo donde toca.</li>
+<li>Elige tu herramienta más lenta y pásala a Tasks.</li>
+<li>Busca cada operación irreversible y ponle una Elicitation que pida algo concreto, no un sí.</li>
+</ol>
+<p>Todo esto vive en la especificación abierta y sus extensiones oficiales, así que un servidor que las implemente funciona en cualquier cliente compatible, no solo en Claude. Y ahí está lo bueno: el trabajo no se tira si mañana cambias de agente.</p>
+    </div>
+    <section class="sources" aria-label="Fuentes">
+      <h2>Fuentes</h2>
+      <ul>
+        <li><a href="https://claude.com/es/resources/articles/skills-over-mcp-tasks-and-more">https://claude.com/es/resources/articles/skills-over-mcp-tasks-and-more</a></li>
+        <li><a href="https://modelcontextprotocol.io/extensions/overview">https://modelcontextprotocol.io/extensions/overview</a></li>
+        <li><a href="https://modelcontextprotocol.io/extensions/skills/overview">https://modelcontextprotocol.io/extensions/skills/overview</a></li>
+        <li><a href="https://modelcontextprotocol.io/extensions/tasks/overview">https://modelcontextprotocol.io/extensions/tasks/overview</a></li>
+        <li><a href="https://modelcontextprotocol.io/extensions/events/overview">https://modelcontextprotocol.io/extensions/events/overview</a></li>
+        <li><a href="https://modelcontextprotocol.io/specification/2026-07-28/client/elicitation">https://modelcontextprotocol.io/specification/2026-07-28/client/elicitation</a></li>
+        <li><a href="https://blog.modelcontextprotocol.io/posts/mcp-turns-two">https://blog.modelcontextprotocol.io/posts/mcp-turns-two</a></li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+<footer><div class="in">© 2026 Manuel Fernández. Las opiniones son mías, no de mi empleador.</div></footer>
+</body>
+</html>

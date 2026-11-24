@@ -54,5 +54,19 @@
       "en": "Anthropic just shipped Skills over MCP, Tasks, Elicitation and File Uploads. A practical look at what is actually new, the real maturity of each piece, and what I would change in my own server."
     },
     "linkedin": "https://www.linkedin.com/feed/update/urn:li:share:7531106202148343810/"
+  },
+  {
+    "date": "2026-11-24",
+    "url": "articulos/2026-11-24-de-conectores-pasivos-a-agentes-colaborativos-skills-over-mc/",
+    "kind": "article",
+    "lang": "es",
+    "title": {
+      "es": "De conectores pasivos a agentes colaborativos - Skills over MCP, Tasks y Elicitation",
+      "en": "From passive connectors to collaborating agents - Skills over MCP, Tasks and Elicitation"
+    },
+    "summary": {
+      "es": "MCP cumple dos años con el mayor paquete de novedades desde su lanzamiento. Qué hace cada una, con ejemplos reales, y qué tocaría primero en un servidor propio.",
+      "en": "MCP turns two with its biggest batch of updates yet. What each one does, with real examples, and what I would change first in my own server."
+    }
   }
 ]
